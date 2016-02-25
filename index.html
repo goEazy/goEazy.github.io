@@ -1,0 +1,28 @@
+<!--
+------------WebSoftPrograms------------
+Developed By : Muhammed Hussain Hingora
+Please Like & Support Us : https://www.facebook.com/Web-Soft-Programs-417180205152446/
+-->
+<!doctype html>
+<html>
+<head>
+<title>HTML5 - CSS3 BACKGROUND COLOR ANIMATION</title>
+<link href="contents/style.css" rel="stylesheet" type="text/css">
+</head>
+<body id = "magic" onmousemove = "myFunc(event)">
+<h1 id = "unmagic">HTML5 - CSS3 BACKGROUND COLOR ANIMATION</h1>
+<br>
+<div id="logo"></div>
+    <script>
+function myFunc(event)
+{
+	var r = Math.floor(event.clientX*255/window.innerWidth);
+	var b = Math.floor(event.clientY*255/window.innerHeight);
+	var g = Math.floor(((r+b)%255)*255/window.innerWidth);
+	magic.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+	unmagic.style.color = "rgb("+(255-(Math.floor(r*255/window.innerWidth)))+","+(255-(Math.floor(g*225/((window.innerHeight + window.innerWidth)/2))))+","+(255-(Math.floor(b*255/window.innerHeight)))+")";
+	unmagic.innerHTML = "colours : rgb(" + r +", " + g + ", " + b + ")";
+}
+</script>
+</body>
+</html>
