@@ -1,9 +1,4 @@
-m /*
-------------WebSoftPrograms------------
-Developed By : Muhammed Hussain Hingora
-Please Like & Support Us : https://www.facebook.com/Web-Soft-Programs-417180205152446/
-*/
-*{
+{
 	padding:0px;
   	margin:0px;
   	font-family:Arial, Helvetica, sans-serif;
@@ -22,18 +17,14 @@ body{
 	background-color:#C33;
 
 }
-#wrapper{
-	width:1280px;
-	height:auto;
-	margin:0 auto;
-	padding:0 auto;
+#logo{	
+	text-align:center;	
+		
 }
-#logo{
-	width:600px;
-	height:200px;
-	background-image: url(harsh_name.png);
-	background-repeat: no-repeat;
-	margin:25px auto;
-	right: 100px;
-	bottom: 0;
+#getplaces{
+color: blue;
+font-family: sans-serif;	 
+text-align:center;
+font-size: 200%;
 }
+

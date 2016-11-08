@@ -1,28 +1,41 @@
-<!--
-------------WebSoftPrograms------------
-Developed By : Muhammed Hussain Hingora
-Please Like & Support Us : https://www.facebook.com/Web-Soft-Programs-417180205152446/
--->
 <!doctype html>
 <html>
 <head>
-<title>HTML5 - CSS3 BACKGROUND COLOR ANIMATION</title>
-<link href="contents/style.css" rel="stylesheet" type="text/css">
+    <title>Harsh</title>
+    <link href="contents/style.css" rel="stylesheet" type="text/css">
 </head>
 <body id = "magic" onmousemove = "myFunc(event)">
-<h1 id = "unmagic">HTML5 - CSS3 BACKGROUND COLOR ANIMATION</h1>
-<br>
-<div id="logo"></div>
+    <h1 id = "unmagic">Harsh</h1>
+    <br>
+    <div id="logo"><img src="contents/harsh_name.png"></div>
+    <br>
+    <h1 id = "tilt">Tilt</h1>
+    <div id = "getplaces"><b><h3><a style = "color:white" href="aawp/get-places.html">Get Places</a></h3></b></div>
     <script>
-function myFunc(event)
-{
-	var r = Math.floor(event.clientX*255/window.innerWidth);
-	var b = Math.floor(event.clientY*255/window.innerHeight);
-	var g = Math.floor(((r+b)%255)*255/window.innerWidth);
-	magic.style.backgroundColor = "rgb("+r+","+g+","+b+")";
-	unmagic.style.color = "rgb("+(255-(Math.floor(r*255/window.innerWidth)))+","+(255-(Math.floor(g*225/((window.innerHeight + window.innerWidth)/2))))+","+(255-(Math.floor(b*255/window.innerHeight)))+")";
-	unmagic.innerHTML = "colours : rgb(" + r +", " + g + ", " + b + ")";
-}
-</script>
+        function myFunc(event)
+        {
+            var y = event.clientY;
+            var r = Math.floor(event.clientX/window.innerWidth*255);
+            var b = Math.floor(event.clientY/window.innerHeight*255);
+            var g = Math.floor((event.clientY + event.clientX)/(window.innerWidth+window.innerHeight)*255);
+            magic.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+            unmagic.style.color = "rgb("+(255-(Math.floor(r*255/window.innerWidth)))+","+(255-(Math.floor(g*225/((window.innerHeight + window.innerWidth)/2))))+","+(255-(Math.floor(b*255/window.innerHeight)))+")";
+            unmagic.innerHTML = "colours : rgb(" + r +", " + g + ", " + b + ")" + y;
+        }
+        if(window.DeviceOrientationEvent){
+            window.addEventListener("deviceorientation", orientation, false);
+        }else{
+            console.log("DeviceOrientationEvent is not supported");
+        }
+        function orientation(event){
+            
+            var rr = Math.abs(Math.round(event.alpha));
+            var bb = Math.abs(Math.round(event.beta));
+            var gg = Math.abs(Math.round(event.gamma));
+	    tilt.innerHTML = rr + ", " + bb + ", " + gg;
+            magic.style.backgroundColor = "rgb("+rr+","+gg+","+bb+")";
+            
+        }
+    </script>
 </body>
 </html>
