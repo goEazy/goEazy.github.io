@@ -9,9 +9,8 @@
     <br>
     <div id="logo"><img src="contents/harsh_name.png"></div>
     <br>
-    <h1 id = "tilt">Tilt</h1>
-    <div id = "getplaces"><b><h3><a style = "color:white" href="AAWP/get-places.html">Get Places</a></h3></b></div><br><br>
-    <div id = "conFusion"><b><h3><a style = "color:white" href="conFusion/index.php">conFusion</a></h3></b></div>
+    <div id = "getplaces"><b><h3><a style = "color:white" href="AAWP/get-places.html">Get Places</a></h3></b></div>
+    <div id = "conFusion"><b><h3><a style = "color:white" href="www.harshagarwal.pe.hu/index.php">conFusion</a></h3></b></div>
     <script>
         function myFunc(event)
         {
@@ -21,7 +20,6 @@
             var g = Math.floor((event.clientY + event.clientX)/(window.innerWidth+window.innerHeight)*255);
             magic.style.backgroundColor = "rgb("+r+","+g+","+b+")";
             unmagic.style.color = "rgb("+(255-(Math.floor(r*255/window.innerWidth)))+","+(255-(Math.floor(g*225/((window.innerHeight + window.innerWidth)/2))))+","+(255-(Math.floor(b*255/window.innerHeight)))+")";
-            unmagic.innerHTML = "colours : rgb(" + r +", " + g + ", " + b + ")" + y;
         }
         if(window.DeviceOrientationEvent){
             window.addEventListener("deviceorientation", orientation, false);
