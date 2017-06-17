@@ -10,7 +10,8 @@
     <div id="logo"><img src="contents/harsh_name.png"></div>
     <br>
     <h1 id = "tilt">Tilt</h1>
-    <div id = "getplaces"><b><h3><a style = "color:white" href="AAWP/get-places.html">Get Places</a></h3></b></div>
+    <div id = "getplaces"><b><h3><a style = "color:white" href="AAWP/get-places.html">Get Places</a></h3></b></div><br><br>
+    <div id = "conFusion"><b><h3><a style = "color:white" href="conFusion/index.php">conFusion</a></h3></b></div>
     <script>
         function myFunc(event)
         {
@@ -32,8 +33,7 @@
             var rr = Math.abs(Math.round(event.alpha));
             var bb = Math.abs(Math.round(event.beta));
             var gg = Math.abs(Math.round(event.gamma));
-	    tilt.innerHTML = rr + ", " + bb + ", " + gg;
-            magic.style.backgroundColor = "rgb("+rr+","+gg+","+bb+")";
+	       magic.style.backgroundColor = "rgb("+rr+","+gg+","+bb+")";
             
         }
     </script>
